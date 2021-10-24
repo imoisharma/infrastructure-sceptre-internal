@@ -1,13 +1,3 @@
-Parameters:
-  CidrBlock:
-    Type: String
-Resources:
-  VPC:
-    Type: 'AWS::EC2::VPC'
-    Properties:
-      CidrBlock:
-        Ref: CidrBlock
-Outputs:
-  VpcId:
-    Value:
-      Ref: VPC
+template_path: vpc.yaml
+parameters:
+  CidrBlock: 10.0.0.0/16
